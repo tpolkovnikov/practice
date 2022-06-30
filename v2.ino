@@ -55,7 +55,7 @@ void leftback(){
   analogWrite(11,150);
 }
 
-void rightfront(){
+void leftfront(){
   pinMode(5,INPUT);
   pinMode(11,INPUT);
   pinMode(6,OUTPUT);
@@ -64,7 +64,7 @@ void rightfront(){
   analogWrite(3,-50);
 }
 
-void leftfront(){
+void rightfront(){
   pinMode(5,INPUT);
   pinMode(11,INPUT);
   pinMode(6,OUTPUT);
@@ -74,22 +74,18 @@ void leftfront(){
 }
 
 void razvorotR(){
-  pinMode(3,INPUT);
-  pinMode(6,INPUT);
-  pinMode(5,OUTPUT);
-  pinMode(11,OUTPUT);
-  analogWrite(5,-50);
-  analogWrite(11,50);
+  pinMode(11,INPUT);
+  pinMode(5,INPUT);
+  analogWrite(11,0);
+  analogWrite(5,150);
 }
   
 void razvorotL(){
-  pinMode(3,INPUT);
-  pinMode(6,INPUT);
-  pinMode(5,OUTPUT);
-  pinMode(11,OUTPUT);
-  analogWrite(11,-50);
-  analogWrite(5,50);
- } 
+  pinMode(5,INPUT);
+  pinMode(11,INPUT);
+  analogWrite(5,0);
+  analogWrite(11,150);
+} 
  
 void setup() {
   Serial.begin(19200);
